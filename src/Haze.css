@@ -1,0 +1,111 @@
+.haze-container {
+  --haze-height: 150px;
+  --band-height: 40px;
+  --haze-color: 255, 100, 40; /* "R,G,B" components */
+
+  width: 100%;
+  height: var(--haze-height);
+  background: #000; /* keep background dark so haze pops */
+  position: relative;
+  overflow: hidden;
+}
+
+.haze {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* bright, thick horizontal band in the middle (blurred for softness) */
+.haze::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: var(--band-height);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--haze-color), 1) 0%,
+    rgba(var(--haze-color), 1) 50%,
+    rgba(var(--haze-color), 1) 100%
+  );
+  filter: blur(22px); /* large blur to make the band soft */
+  opacity: 1;
+  transform-origin: center;
+}
+
+/* blended fades that make the haze taper vertically and soften horizontally */
+.haze::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /*
+    - first two gradients create vertical taper (up + down)
+    - last two gradients add a soft horizontal falloff (left + right)
+  */
+  background: linear-gradient(
+      to top,
+      rgba(var(--haze-color), 0.85) 0%,
+      rgba(var(--haze-color), 0.45) 25%,
+      rgba(var(--haze-color), 0.12) 55%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(var(--haze-color), 0.85) 0%,
+      rgba(var(--haze-color), 0.45) 25%,
+      rgba(var(--haze-color), 0.12) 55%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(var(--haze-color), 0.18) 30%,
+      rgba(var(--haze-color), 0.06) 60%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(var(--haze-color), 0.18) 30%,
+      rgba(var(--haze-color), 0.06) 60%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
+
+  /* extra softening so the fades feel natural */
+  filter: blur(6px);
+  opacity: 0.95;
+
+  /* mask to ensure the very top/bottom edges fade to transparent
+     (works in modern browsers; keeps edges natural) */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+/* small accessibility: reduce motion if the user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .haze::before {
+    filter: blur(18px);
+  }
+  .haze::after {
+    filter: blur(4px);
+  }
+}
