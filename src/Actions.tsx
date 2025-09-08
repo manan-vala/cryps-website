@@ -11,7 +11,15 @@ function Actions() {
           <div className="badge-dot h-2 w-2 rounded-full bg-(--theme-color)"></div>
           <span>How it works</span>
         </div>
-        <div className="action-text flex flex-col gap-5">
+        <motion.div
+          initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="action-text flex flex-col gap-5"
+        >
           <div className="action-heading text-7xl text-center font-semibold">
             <span>3 Simple Steps</span>
           </div>
@@ -21,7 +29,7 @@ function Actions() {
               three effortless steps.
             </span>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="action-body flex items-center justify-center gap-6">
         <motion.div
