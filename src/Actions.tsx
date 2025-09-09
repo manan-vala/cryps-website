@@ -31,7 +31,7 @@ function Actions() {
           </div>
         </motion.div>
       </div>
-      <div className="action-body flex items-center justify-center gap-6">
+      <div className="action-body flex items-center justify-center gap-10 mt-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

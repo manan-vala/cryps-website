@@ -1,0 +1,39 @@
+<svg
+  display="block"
+  role="presentation"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M 12 17 L 2 17 L 2 5 L 12 5 L 12 6 L 14 6 L 14 2 C 14 0.9 13.1 0 12 0 L 2 0 C 0.9 0 0 0.9 0 2 L 0 20 C 0 21.1 0.9 22 2 22 L 12 22 C 13.1 22 14 21.1 14 20 L 14 16 L 12 16 Z M 2 2 L 12 2 L 12 3 L 2 3 Z M 12 20 L 2 20 L 2 19 L 12 19 Z"
+    fill="var(--esondr, rgb(255,255,255))"
+    height="22px"
+    id="eweq5LugR"
+    transform="translate(3 1)"
+    width="14px"
+  />
+  <path
+    d="M 1.38 2.62 L 2 4 L 2.62 2.62 L 4 2 L 2.62 1.38 L 2 0 L 1.38 1.38 L 0 2 Z"
+    fill="var(--esondr, rgb(255,255,255))"
+    height="4px"
+    id="Wez2RNhAa"
+    transform="translate(17 7)"
+    width="4px"
+  />
+  <path
+    d="M 4 0 L 2.75 2.75 L 0 4 L 2.75 5.25 L 4 8 L 5.25 5.25 L 8 4 L 5.25 2.75 Z"
+    fill="var(--esondr, rgb(255,255,255))"
+    height="8px"
+    id="XAJ1ODiXs"
+    transform="translate(10 8)"
+    width="8px"
+  />
+  <path
+    d="M 2 0 L 1.38 1.38 L 0 2 L 1.38 2.62 L 2 4 L 2.62 2.62 L 4 2 L 2.62 1.38 Z"
+    fill="var(--esondr, rgb(255,255,255))"
+    height="4px"
+    id="d9feIwiuF"
+    transform="translate(17 13)"
+    width="4px"
+  />
+</svg>

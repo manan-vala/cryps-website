@@ -8,7 +8,7 @@ function Hero() {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          duration: 0.5,
+          duration: 0.8,
           ease: "easeInOut",
         }}
         className="navbar w-4/5 h-12 flex items-center justify-between"
@@ -16,7 +16,7 @@ function Hero() {
         <div className="navbar-logo h-full flex items-center justify-center gap-3">
           <div className="h-10 w-24 bg-[url(https://framerusercontent.com/images/N0ZiVbjC9Abdh48Aq8g7qL604.svg)] bg-cover bg-center"></div>
         </div>
-        <div className="navbar-main h-full rounded-full bg-[#222] px-8 flex items-center justify-center gap-6 text-sm">
+        <div className="navbar-main max-lg:hidden h-full rounded-full bg-[#222] px-8 flex items-center justify-center gap-6 text-sm border border-neutral-700">
           <button className="hover:text-neutral-400">Products</button>
           <button className="hover:text-neutral-400">About</button>
           <button className="hover:text-neutral-400">Blogs</button>

@@ -1,0 +1,15 @@
+<svg
+  display="block"
+  role="presentation"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M 13 11 L 11 13 L 9 11 L 11 9 Z M 11 5 L 13.12 7.12 L 15.62 4.62 L 11 0 L 6.38 4.62 L 8.88 7.12 Z M 5 11 L 7.12 8.88 L 4.62 6.38 L 0 11 L 4.62 15.62 L 7.12 13.12 Z M 17 11 L 14.88 13.12 L 17.38 15.62 L 22 11 L 17.38 6.38 L 14.88 8.88 Z M 11 17 L 8.88 14.88 L 6.38 17.38 L 11 22 L 15.62 17.38 L 13.12 14.88 Z"
+    fill="var(--esondr, rgb(255,255,255))"
+    height="22.000000114440915px"
+    id="KEPl1qoTg"
+    transform="translate(1 1)"
+    width="22.000000114440915px"
+  />
+</svg>

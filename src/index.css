@@ -45,6 +45,7 @@
   --font-inter: "Inter", sans-serif;
   --text-tiny: 0.5rem;
   --theme-color: rgba(232, 86, 0, 1);
+  --main-bg-cl: rgba(14, 15, 17, 1);
 }
 
 :root {
