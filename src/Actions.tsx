@@ -1,9 +1,8 @@
-import "./Actions.css";
 import { motion } from "motion/react";
 
 function Actions() {
   return (
-    <div className="w-full h-auto bg-black text-white px-5 py-10 font-inter flex flex-col gap-8">
+    <div className="w-full h-auto bg-(--main-bg-cl) text-white px-5 py-10 font-inter flex flex-col gap-8">
       <div className="action-header flex flex-col items-center justify-center gap-5">
         {" "}
         <div className="badge relative bg-[#222] text-sm py-2 px-4 rounded-full flex items-center justify-between gap-2">
@@ -18,9 +17,10 @@ function Actions() {
             duration: 0.8,
             ease: "easeInOut",
           }}
+          viewport={{ once: true }}
           className="action-text flex flex-col gap-5"
         >
-          <div className="action-heading text-7xl text-center font-semibold">
+          <div className="action-heading text-7xl max-lg:text-4xl text-center font-semibold">
             <span>3 Simple Steps</span>
           </div>
           <div className="action-description text-lg text-center text-neutral-400">
@@ -31,7 +31,7 @@ function Actions() {
           </div>
         </motion.div>
       </div>
-      <div className="action-body flex items-center justify-center gap-10 mt-12">
+      <div className="action-body flex flex-wrap items-center justify-center gap-10 mt-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ function Actions() {
         >
           <div className="p-2 border border-neutral-800 rounded-4xl">
             <div
-              className="card-img rounded-4xl h-60 border border-[#e85600] border-solid
+              className="card-img rounded-4xl h-60 max-md:h-50 border border-[#e85600] border-solid
 "
             >
               <img
@@ -72,7 +72,7 @@ function Actions() {
         >
           <div className="p-2 border border-neutral-800 rounded-4xl">
             <div
-              className="card-img rounded-4xl h-60 border border-[#e85600] border-solid
+              className="card-img rounded-4xl h-60 max-md:h-50 border border-[#e85600] border-solid
 "
             >
               <img
@@ -100,7 +100,7 @@ function Actions() {
         >
           <div className="p-2 border border-neutral-800 rounded-4xl">
             <div
-              className="card-img rounded-4xl h-60 border border-[#e85600] border-solid
+              className="card-img rounded-4xl h-60 max-md:h-50 border border-[#e85600] border-solid
 "
             >
               <img

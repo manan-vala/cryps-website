@@ -1,9 +1,10 @@
+import "./Hero.css";
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 
 function Hero() {
   return (
-    <div className="w-full h-auto bg-black flex flex-col items-center justify-center p-6 text-white font-inter">
+    <div className="hero w-full h-auto bg-[var(--main-bg-cl)] flex flex-col items-center justify-center p-6 text-white font-inter">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -30,13 +31,13 @@ function Hero() {
             color: "#ffffff",
           }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="navbar-cta h-full px-8 flex items-center justify-center text-sm rounded-full font-medium border border-white"
+          className="navbar-cta h-full px-8 max-md:hidden flex items-center justify-center text-sm rounded-full font-medium border border-white"
         >
           <span>BUY TEMPLATE</span>
         </motion.div>
       </motion.div>
 
-      <div className="hero-body h-100 flex flex-col gap-6 items-center justify-center w-3/5 my-10">
+      <div className="hero-body h-100 flex flex-col gap-6 items-center justify-center w-3/4 my-10">
         <div className="badge relative bg-[#222] text-sm py-2 px-4 rounded-full flex items-center justify-between gap-2">
           <span className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-(--theme-color) to-transparent h-px w-1/2 mx-auto"></span>
           <div className="badge-dot h-2 w-2 rounded-full bg-(--theme-color)"></div>
@@ -52,7 +53,7 @@ function Hero() {
           viewport={{ once: true }}
           className="body-text flex flex-col gap-5"
         >
-          <div className="body-heading text-7xl text-center font-semibold">
+          <div className="body-heading text-7xl max-lg:text-4xl text-center font-semibold">
             <span>Decentralized Future Cryptocurrency Assets</span>
           </div>
           <div className="body-description text-lg text-center text-neutral-400">
@@ -60,7 +61,7 @@ function Hero() {
           </div>
         </motion.div>
 
-        <div className="hero-btns flex items-center justify-center h-12 w-100 gap-5 mt-5">
+        <div className="hero-btns flex items-center justify-center h-12 w-full gap-5 mt-5">
           <motion.button
             initial={{
               backgroundColor: "#e85600",
@@ -73,7 +74,7 @@ function Hero() {
               borderColor: "#ffffff",
             }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="h-full px-8 flex items-center justify-center bg-(--theme-color) text-black text-sm rounded-full font-medium border border-(--theme-color)"
+            className="h-12 px-8 max-md:hidden flex items-center justify-center bg-(--theme-color) text-black text-sm rounded-full font-medium border border-(--theme-color)"
           >
             <span>ANALYSER</span>
           </motion.button>

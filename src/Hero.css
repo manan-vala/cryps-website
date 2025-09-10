@@ -1,9 +1,48 @@
-/* Hero.css */
-/* Keep a simple reduced-motion fallback just in case */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--main-bg-cl); /* base background stays here */
+}
+
+/* grid layer on top of the bg, behind children */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* only top 20% */
+  background-image: linear-gradient(to right, #252525 1px, transparent 1px),
+    linear-gradient(to bottom, #252525 1px, transparent 1px);
+  background-size: 80px 80px;
+
+  /* fade at bottom */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* lift content above grid */
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+@media (width<=768px) {
+  .hero::before {
+    height: 80%;
+  }
+}
+
+@media (width<=1024px) {
+  .hero::before {
+    height: 60%;
   }
 }

@@ -6,8 +6,8 @@ function Features() {
   return (
     <div className="w-full bg-(--main-bg-cl) text-white font-inter flex flex-col items-center justify-center py-15">
       <div className="container w-4/5 h-auto">
-        <div className="main flex items-center justify-center">
-          <div className="main-text flex flex-col w-1/2">
+        <div className="main flex max-lg:flex-col items-center justify-center">
+          <div className="main-text flex flex-col w-1/2 max-lg:w-4/5">
             {" "}
             <motion.div
               initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
@@ -20,17 +20,17 @@ function Features() {
               className="main-body-text flex flex-col gap-5"
             >
               {" "}
-              <div className="badge-container flex items-center justify-start">
+              <div className="badge-container flex items-center justify-start max-lg:justify-center">
                 <div className="badge relative bg-[#222] text-sm py-2 px-4 rounded-full flex items-center justify-between gap-2">
                   <span className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-(--theme-color) to-transparent h-px w-1/2 mx-auto"></span>
                   <div className="badge-dot h-2 w-2 rounded-full bg-(--theme-color)"></div>
                   <span>Cutting-Edge AI Solutions</span>
                 </div>
               </div>
-              <div className="main-body-heading text-6xl text-start font-semibold">
+              <div className="main-body-heading text-6xl max-md:text-4xl text-start max-lg:text-center font-semibold">
                 <span>Your Gateway to Advanced Crypto Data Indexing</span>
               </div>
-              <div className="main-body-description text-lg text-start text-neutral-400">
+              <div className="main-body-description text-lg text-start max-md:text-center text-neutral-400">
                 <span>
                   Experience the power of the CRYPS Network, where crypto
                   indexing meets decentralization. Our Staked Authority model
@@ -40,11 +40,12 @@ function Features() {
               </div>
             </motion.div>
           </div>
-          <div className="main-img w-1/2">
+          <div className="main-img w-1/2 max-lg:w-4/5">
             <IndexAnimation />
           </div>
         </div>
-        <div className="h-12">
+
+        <div className="h-12 flex items-center justify-start max-lg:justify-center">
           <motion.button
             initial={{
               backgroundColor: "#e85600",
@@ -64,7 +65,7 @@ function Features() {
           </motion.button>
         </div>
 
-        <div className="main-sections flex gap-8 mt-20">
+        <div className="main-sections grid gap-16 mt-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +74,7 @@ function Features() {
               ease: "easeInOut",
             }}
             viewport={{ once: true }}
-            className="w-auto h-full "
+            className="w-auto h-full"
           >
             <div className="icon h-10 w-10 p-2 rounded-full bg-(--theme-color) mb-10 shadow-[3px_3px_12px_rgba(232,86,0,1)]">
               <img src="./main-icons/icon.svg" alt="" />
@@ -95,7 +96,7 @@ function Features() {
               ease: "easeInOut",
             }}
             viewport={{ once: true }}
-            className="w-auto h-full "
+            className="w-auto h-full"
           >
             <div className="icon h-10 w-10 p-2 rounded-full bg-(--theme-color) mb-10 shadow-[3px_3px_12px_rgba(232,86,0,1)]">
               <img src="./main-icons/icon2.svg" alt="" />
@@ -117,7 +118,7 @@ function Features() {
               ease: "easeInOut",
             }}
             viewport={{ once: true }}
-            className="w-auto h-full "
+            className="w-auto h-full"
           >
             <div className="icon h-10 w-10 p-2 rounded-full bg-(--theme-color) mb-10 shadow-[3px_3px_12px_rgba(232,86,0,1)]">
               <img src="./main-icons/icon3.svg" alt="" />
@@ -139,7 +140,7 @@ function Features() {
               ease: "easeInOut",
             }}
             viewport={{ once: true }}
-            className="w-auto h-full "
+            className="w-auto h-full"
           >
             <div className="icon h-10 w-10 p-2 rounded-full bg-(--theme-color) mb-10 shadow-[3px_3px_12px_rgba(232,86,0,1)]">
               <img src="./main-icons/icon4.svg" alt="" />

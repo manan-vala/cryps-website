@@ -69,40 +69,77 @@ const techLogos2 = [
 
 function BadgeLoop() {
   return (
-    <div className="w-full h-auto bg-black">
-      <div
-        style={{ height: "120px", position: "relative", overflow: "hidden" }}
-      >
-        <LogoLoop
-          logos={techLogos1}
-          speed={60}
-          direction="left"
-          logoHeight={100}
-          gap={40}
-          pauseOnHover={false}
-          scaleOnHover={false}
-          fadeOut
-          fadeOutColor="#000000"
-          ariaLabel="Technology partners"
-        />
+    <>
+      <div className="w-full h-auto bg-(--main-bg-cl) max-md:hidden">
+        <div
+          style={{ height: "120px", position: "relative", overflow: "hidden" }}
+        >
+          <LogoLoop
+            logos={techLogos1}
+            speed={60}
+            direction="left"
+            logoHeight={100}
+            gap={40}
+            pauseOnHover={false}
+            scaleOnHover={false}
+            fadeOut
+            fadeOutColor="#0E0F11"
+            ariaLabel="Technology partners"
+          />
+        </div>
+        <div
+          style={{ height: "200px", position: "relative", overflow: "hidden" }}
+        >
+          <LogoLoop
+            logos={techLogos2}
+            speed={60}
+            direction="right"
+            logoHeight={100}
+            gap={40}
+            pauseOnHover={false}
+            scaleOnHover={false}
+            fadeOut
+            fadeOutColor="#0E0F11"
+            ariaLabel="Technology partners"
+          />
+        </div>
       </div>
-      <div
-        style={{ height: "200px", position: "relative", overflow: "hidden" }}
-      >
-        <LogoLoop
-          logos={techLogos2}
-          speed={60}
-          direction="right"
-          logoHeight={100}
-          gap={40}
-          pauseOnHover={false}
-          scaleOnHover={false}
-          fadeOut
-          fadeOutColor="#000000"
-          ariaLabel="Technology partners"
-        />
+
+      <div className="w-full h-auto bg-(--main-bg-cl) md:hidden">
+        <div
+          style={{ height: "80px", position: "relative", overflow: "hidden" }}
+        >
+          <LogoLoop
+            logos={techLogos1}
+            speed={60}
+            direction="left"
+            logoHeight={60}
+            gap={40}
+            pauseOnHover={false}
+            scaleOnHover={false}
+            fadeOut
+            fadeOutColor="#0E0F11"
+            ariaLabel="Technology partners"
+          />
+        </div>
+        <div
+          style={{ height: "80px", position: "relative", overflow: "hidden" }}
+        >
+          <LogoLoop
+            logos={techLogos2}
+            speed={60}
+            direction="right"
+            logoHeight={60}
+            gap={40}
+            pauseOnHover={false}
+            scaleOnHover={false}
+            fadeOut
+            fadeOutColor="#0E0F11"
+            ariaLabel="Technology partners"
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

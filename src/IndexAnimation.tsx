@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 
 function IndexAnimation() {
   return (
-    <div className="w-full h-auto p-4 bg-(--main-bg-cl) flex items-center justify-center">
-      <div className="img-holder h-100 relative flex items-center justify-center">
+    <div className="w-full h-auto max-md:h-65 p-4 bg-(--main-bg-cl) flex items-center justify-center">
+      <div className="img-holder h-100 max-md:h-65 relative flex items-center justify-center">
         <img
           src="https://framerusercontent.com/images/geSAfWPd5BeBGWuz6qaWXt5wk.svg"
           alt=""

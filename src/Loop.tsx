@@ -42,7 +42,7 @@ const techLogos = [
 
 function Loop() {
   return (
-    <div className="w-full flex items-center justify-center bg-black font-inter">
+    <div className="w-full flex items-center justify-center bg-(--main-bg-cl) font-inter">
       <div
         style={{ position: "relative", overflow: "hidden" }}
         className="w-3/4 flex flex-col items-center justify-between py-10"
@@ -62,7 +62,7 @@ function Loop() {
           pauseOnHover
           scaleOnHover
           fadeOut
-          fadeOutColor="#000"
+          fadeOutColor="#0E0F11"
           ariaLabel="Technology partners"
         />
       </div>
