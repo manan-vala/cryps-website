@@ -20,8 +20,8 @@ function TextScroll() {
       ref={ref}
       className="relative h-[300vh] bg-[var(--main-bg-cl)] flex justify-center"
     >
-      <div className="sticky top-0 flex h-screen items-center justify-center w-3/5 max-md:w-9/10">
-        <h1 className="text-6xl max-md:text-5xl font-semibold tracking-tight flex flex-wrap justify-center">
+      <div className="sticky top-0 flex h-screen items-center justify-center w-3/5 max-md:w-7/10">
+        <h1 className="text-6xl max-md:text-4xl font-semibold tracking-tight flex flex-wrap justify-center">
           {words.map((word, i) => {
             // Each word reveals in sequence based on index
             const start = i / words.length;
