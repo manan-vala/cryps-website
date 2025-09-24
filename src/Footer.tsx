@@ -39,8 +39,8 @@ function Footer() {
           </motion.div>
         </div>
 
-        <div className="w-1/2 max-lg:w-full">
-          <div className="p-4 rounded-4xl border border-neutral-800 flex max-md:flex-col gap-8">
+        <div className="w-1/2 max-lg:w-4/5">
+          <div className="p-4 rounded-4xl border border-neutral-800 flex max-md:flex-col gap-8 items-center">
             <img
               src="https://framerusercontent.com/images/Dcogk8piaYmNo1mT3Ddc3Ln4MPA.jpg"
               alt=""

@@ -5,11 +5,13 @@ import Actions from "./Actions";
 import Features from "./Features";
 import CoinDisplay from "./CoinDisplay";
 import Footer from "./Footer";
+import TextScroll from "./TextScroll";
 
 function App() {
   return (
     <>
       <Hero />
+      <TextScroll />
       <Loop />
       <Actions />
       <Features />
