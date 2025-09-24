@@ -18,7 +18,7 @@ function TextScroll() {
   return (
     <section
       ref={ref}
-      className="relative h-[300vh] bg-[var(--main-bg-cl)] flex justify-center"
+      className="relative h-[300vh] bg-[radial-gradient(circle,_var(--theme-color)_0%,_transparent_50%)] bg-[var(--main-bg-cl)] bg-[length:100%_100%] bg-no-repeat flex justify-center"
     >
       <div className="sticky top-0 flex h-screen items-center justify-center w-3/5 max-md:w-7/10">
         <h1 className="text-6xl max-md:text-4xl font-semibold tracking-tight flex flex-wrap justify-center">
